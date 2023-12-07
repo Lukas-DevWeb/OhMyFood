@@ -1,0 +1,134 @@
+// Section Réserver 
+.reserved {
+    text-align: center;
+    padding: 1rem;
+
+    h1{
+        @include accueil-h1-mobile;
+        margin: 1rem 3rem;
+
+        @include tablette {
+            @include accueil-h1-tablette;
+        }
+
+        @include desktop {
+            @include accueil-h1-desktop;
+        }
+    }
+
+    p {
+        @include header-p;
+        margin: 0px;
+        color: $color-txt-grey;
+    }
+}
+
+// Section Fonctionnement
+
+.fonctionnement {
+    background-color: $background-color-white;
+    padding: 20px;
+
+    h2 {
+        @include accueil-h2;
+        margin-top: 28px;
+        margin-bottom: 26px;
+
+        @include tablette {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        @include desktop {
+            width: 80%;
+            margin: auto;
+            padding-top: 30px;
+        }
+    }
+
+}
+
+// section carte Restaurants
+
+.restaurants {
+
+    h2 {
+        @include accueil-h2;
+        margin-bottom: 34px;
+
+        @include tablette {
+            text-align: center;
+            margin-top: 28px;
+        }
+
+        @include desktop {
+            width: 80%;
+            margin: auto;
+            padding-top: 30px;
+            padding-bottom: 27px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__text {
+        padding: 16px 0px 12px 12px;
+
+        h3 {
+            @include accueil-h3;
+            color: $color-txt-base;
+            margin: 0px;
+            margin-bottom: 5px
+        }
+
+        p {
+            @include accueil-p;
+            color: $color-txt-base;
+            margin: 0px;
+        }
+
+    }
+}
+
+// Pages Restaurants 
+
+.menu__title {
+    @include restaurants-h1;
+    margin: 0;
+}
+
+.sousmenu__title {
+    @include restaurants-h2;
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    padding-bottom: 5px;
+}
+
+.menuitem {
+    &__title {
+        @include restaurants-h3;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0px;
+        padding-right: 15px;
+    }
+
+    &__texte {
+        @include restaurants-p;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0px;
+        padding-top: 5px;
+        padding-right: 15px;
+    }
+
+    &__price {
+        @include price;
+        padding-top: 5px;
+
+    }
+}

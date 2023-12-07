@@ -1,0 +1,72 @@
+// Header Accueil 
+
+.header_logo {
+    position: relative;
+    margin: 0px;
+    height: 63px;
+    @extend %flex-center;
+    background-color: $background-color-white;
+    @include shadow-header;
+
+    @include desktop {
+        height: 96px;
+    }
+
+    img {
+        width: 162px;
+
+        @include desktop {
+            width: 200px;
+        }
+    }
+}
+
+// Header Restaurants
+
+header {
+
+    .header_logopage {
+        position: relative;
+        @extend %flex-center;
+        background-color: $background-color-white;
+        @include shadow-header;
+        margin: 0px;
+        height: 63px;
+
+        @include desktop {
+            height: 96px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-txt-base;
+            cursor: pointer;
+        }
+
+        i {
+            position: absolute;
+            margin-top: -10px;
+            left: 2rem;
+            font-size: 1.5rem;
+        }
+
+        img {
+            width: 162px;
+
+            @include desktop {
+                width: 200px;
+            }
+        }
+    }
+
+    .header_img {
+        object-fit: cover;
+        height: 275px;
+        width: 100%;
+        border-radius: none;
+
+        @include desktop{
+            height: 400px;
+        }
+    }
+}

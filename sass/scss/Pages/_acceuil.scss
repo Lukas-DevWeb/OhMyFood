@@ -1,0 +1,121 @@
+*{
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    background-color: $background-color;
+}
+
+// Input Rechercher 
+
+.search {
+    background-color: $color-grey;
+    @extend %flex-center;
+    height: 50px;
+    gap: 17px;
+    padding-left: 50px;
+
+    i {
+        color: $color-txt-grey;
+    }
+
+    input {
+        @include p;
+        background-color: $color-grey;
+        border: none;
+
+        &::placeholder {
+            color: $color-txt-grey;
+        }
+
+    }
+
+}
+
+// Articles Restaurants
+
+.restaurants {
+    padding: 20px;
+    margin-bottom: 44px;
+    background-color: $background-color-grey-light;
+
+    @include desktop {
+        margin: auto;
+        margin-right: 0px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        background-color: $background-color-white;
+        @include cards-shadow-radius;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 10rem;
+            object-fit: cover;
+        }
+
+        @include tablette {
+            width: 70%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__cards {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+
+        }
+    }
+
+    &__card {
+        @include desktop {
+            width: 100%;
+            margin: 0px;
+        }
+    }
+}
+
+// Direction Cards
+
+.colonne__1 {
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;
+        margin-bottom: 30px;
+    }
+
+}
+
+.colonne__2 {
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;
+    }
+
+}

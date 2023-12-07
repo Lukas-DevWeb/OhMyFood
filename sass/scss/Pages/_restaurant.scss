@@ -1,0 +1,106 @@
+// Fond pages Restaurants
+
+main {
+    @include tablette {
+        background-color: $background-color-white;
+    }
+
+    @include desktop {
+        background-color: $background-color-white;
+    }
+}
+
+// Fond Menu
+
+.main__menu {
+    background-color: $background-color;
+    border-radius: 40px 40px 0px 0px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+
+    @include tablette {
+        width: 80%;
+        margin: auto;
+        margin-top: -60px;
+    }
+
+    @include desktop {
+        width: 80%;
+        margin: auto;
+        margin-top: -60px;
+    }
+}
+
+
+// Section Menu
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 17px 10px;
+
+    @include tablette {
+        width: 50%;
+        margin: auto;
+    }
+
+    @include desktop {
+        width: 40%;
+        margin: auto;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .heart {
+        @include desktop {
+            right: 0.5rem;
+        }
+    }
+}
+
+.menuitem {
+    background-color: $background-color-white;
+    margin-bottom: 12px;
+    padding: 11px;
+    @include cards-shadow-radius;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    &__list {
+        white-space: nowrap;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    &__price {
+        align-self: flex-end;
+    }
+
+}
+
+.restaurant__menu {
+    padding: 28px 13px 0px 13px;
+
+    a {
+        text-decoration: none;
+        color: $color-txt-base;
+        cursor: pointer;
+    }
+
+    @include tablette {
+        width: 70%;
+        margin: auto;
+    }
+
+    @include desktop {
+        width: 70%;
+        margin: auto;
+    }
+}

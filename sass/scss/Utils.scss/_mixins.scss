@@ -1,0 +1,184 @@
+// Titre 1
+
+@mixin accueil-h1-mobile {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+@mixin accueil-h1-tablette {
+    font-size: 32px;
+    line-height: 37px;
+}
+
+@mixin accueil-h1-desktop {
+    font-size: 40px;
+    line-height: 47px;
+}
+
+@mixin restaurants-h1 {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 41px;
+    color: $color-txt-logo;
+}
+
+// Titre 2
+
+@mixin accueil-h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+@mixin restaurants-h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+// Titre 3
+
+@mixin accueil-h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+@mixin restaurants-h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+// Paragraphe 
+
+@mixin accueil-p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+@mixin restaurants-p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 17.6px;
+}
+
+@mixin p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin header-p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+@mixin new {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@mixin price {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+@mixin footer {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+// Shadow and Radius
+
+@mixin shadow-header {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+@mixin button-shadow-radius {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+@mixin button-reserved-shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+@mixin button-reserved-hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 25px;
+}
+
+@mixin cards-shadow-radius {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+// Breakpoints 
+
+@mixin tablette {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width:1024px) {
+        @content;
+    }
+}
+
+// Button
+
+@mixin btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    color: $color-white;
+    @include button-reserved-shadow;
+    border: none;
+    background: $color-linear;
+}
+
+@mixin btn-hover {
+    background: $color-linear-hover;
+    @include button-reserved-hover;
+    cursor: pointer;
+}
