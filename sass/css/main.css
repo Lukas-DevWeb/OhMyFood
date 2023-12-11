@@ -595,7 +595,6 @@ header .header_img {
   object-fit: cover;
   height: 275px;
   width: 100%;
-  border-radius: none;
 }
 @media screen and (min-width: 1024px) {
   header .header_img {
